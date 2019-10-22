@@ -1,1 +1,174 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #616161;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin:0;
+    padding:0;
+  }
+
+  router-outlet + *  {
+    padding: 0 auto;
+  }
+  
+  /* Text */
+  
+  h2 {
+    font-size: 2em; color:#000;
+  }
+  
+  /*h1, h2 {
+    font-weight: lighter;
+  }*/
+  
+  p {
+    font-size: 14px;
+  }
+  
+  /* Hyperlink */
+  
+  a {
+    cursor: pointer;
+    color: #69FA08;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Input */
+  
+  input {
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #BDBDBD;
+  }
+  
+  label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+  
+  /* Button */
+  .button, button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+  }
+  
+  .button:hover, button:hover {
+    opacity: 0.8;
+    font-weight: normal;
+  }
+  
+  .button:disabled, button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  @media screen and (max-width:600px){
+    .header{
+      height:140px;
+    }
+    h1{
+      font-size:1.5em;
+    }
+    .cart-item, .shipping-item{
+      width:100%; margin-left:auto; margin-right:auto;
+    }
+  }
+  @media screen and (min-width:600px){
+    .header{
+      height:160px;
+    }
+    .cart-item, .shipping-item{
+      width:100%; margin-left:auto; margin-right:auto;
+    }
+  }
+  @media screen and (min-width:768px){
+    .header{
+      height:120px;
+    }
+    .cart-item, .shipping-item{
+      width:100%; margin-left:auto; margin-right:auto;
+    }
+  }
+  @media screen and (min-width:900px){
+    .header{
+      height:120px;
+    }
+    .cart-item, .shipping-item{
+      width:100%; margin-left:auto; margin-right:auto;
+    }
+  }
+  @media screen and (min-width:1200px){
+    .header{
+      height:120px;
+    }
+    .cart-item, .shipping-item{
+      width:100%; margin-left:auto; margin-right:auto;
+    }
+  }
+  
+  /* Fancy Button */
+  
+  .fancy-button {
+    background-color: white;
+    color: #1976d2;
+  }
+  
+  .fancy-button i.material-icons {
+    color: #1976d2;
+    padding-right: 4px;
+  }
+  
+  /* Top Bar */
+  
+  .header {
+    width: 100%;
+    margin-right:auto; margin-left:auto;
+    background-color: #1976d2;
+    z-index:1;
+    /*padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+  }
+  
+  /* Checkout Cart, Shipping Prices */
+  
+  .cart-item, .shipping-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    background-color: #EEEEEE;
+    align-items: center;
+  }
+
+  /*body {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    margin-bottom: 50px;
+    margin-top: 0;
+    position: relative;
+}*/
