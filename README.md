@@ -1,3 +1,9 @@
+# HCIGROUP-AREPO4
+This is the final code for the HCI GROUP WORK. Its a simple shopping app thats allows user to place orders of Phones.
+The projects was designed by amos moyo. amosmoyo5300@gmail.com.
+The project is written using Angular Framework.
+
+
 # HCIGROUPA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.

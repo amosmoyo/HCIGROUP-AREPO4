@@ -19,6 +19,10 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+// Import below modules for NGX Toastr
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +40,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),// ToastrModule added
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     RouterModule.forRoot([

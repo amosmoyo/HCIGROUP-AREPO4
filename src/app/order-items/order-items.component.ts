@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 //import { products } from '../products';
 
+import { ToastrService } from 'ngx-toastr';
+
 import { FormBuilder, FormGroup} from '@angular/forms';
 
 import { CartService } from '../cart.service';
@@ -16,18 +18,20 @@ export class OrderItemsComponent implements OnInit {
 
   public checkoutForm:FormGroup;
 
-  constructor(public cartService:CartService,public formBuilder:FormBuilder) { }
+  constructor(public cartService:CartService,public formBuilder:FormBuilder,public toastr: ToastrService) { }
 
   ngOnInit() {
     this.items = this.cartService.getItems();
     this.cartService.GetCustomersList();
-    this.checkoutForm();
+    this.checkoutsForm();
   }
 
-  checkoutForm(){
+  checkoutsForm(){
      this.checkoutForm = this.formBuilder.group({
        username:'',
-       email:''
+       email:'',
+       message:'',
+       delivary:''
      })
   }
 
@@ -35,6 +39,7 @@ export class OrderItemsComponent implements OnInit {
     
     this.items = this.cartService.clearCart();
     this.cartService.AddCustomer(this.checkoutForm.value);
+    this.toastr.success('You order was successfully placed');
     this.checkoutForm.reset();
   }
 

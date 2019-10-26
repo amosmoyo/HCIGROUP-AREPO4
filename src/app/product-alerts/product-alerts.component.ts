@@ -17,7 +17,7 @@ export class ProductAlertsComponent implements OnInit {
   }
 
   handleClick(){
-    this.notify.emit("The price of this product is below 101 dollas! You this is fair??? you can go and get it")
+    this.notify.emit("The price of this product is below 101 dollas! You think this is a fair PRICE!? You can  now  go and get it")
   }
 
 }

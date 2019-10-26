@@ -1,14 +1,14 @@
 [
   {
     "type": "Overnight",
-    "price": 25.99
+    "price": 10.99
   },
   {
-    "type": "2-Day",
-    "price": 9.99
+    "type": "Two to Five Days",
+    "price": 5.99
   },
   {
-    "type": "Postal",
+    "type": "Postal Address",
     "price": 2.99
   }
 ]

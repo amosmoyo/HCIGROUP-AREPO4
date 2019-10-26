@@ -42,36 +42,39 @@ export class CartService {
   AddCustomer(customer: Customer) {
     this.customersRef.push({
       username: customer.username,
-      email: customer.email
+      email: customer.email,
+      message:customer.message,
+      delivary:customer.delivary
     })
   }
 
-  // Fetch Single Customer Object
+  /*/ Fetch Single Customer Object
   GetCustomer(id: string) {
-    this.customerRef = this.db.object('students-list/' + id);
+    this.customerRef = this.db.object('customers-list/' + id);
     return this.customerRef;
-  }
+  }*/
 
    
   // Fetch Customer List
   GetCustomersList() {
-    this.customersRef = this.db.list('students-list');
+    this.customersRef = this.db.list('customers-list');
     return this.customersRef;
   }
 
-  // Update Customer Object
+  /*/ Update Customer Object
   UpdateCustomer(customer: Customer) {
     this.customerRef.update({
       username: customer.username,
-      email: customer.email
+      email: customer.email,
+      meassage:customer.message
     })
-  }  
+  }*/  
 
-  // Delete Customer Object
+  /*/ Delete Customer Object
   DeleteCustomer(id: string) { 
-    this.customerRef = this.db.object('students-list/'+id);
+    this.customerRef = this.db.object('customers-list/'+id);
     this.customerRef.remove();
-  }    
+  }*/    
  
   
   /*// Creates an Ad, then returns as an object

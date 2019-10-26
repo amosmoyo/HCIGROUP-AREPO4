@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   }
 
   share() {
-    window.alert('CROMO-STORE,We Offer the best Brands of Phone. Contacts us at amosmoyo5300@gmail.com');
+    window.alert('At CROMO-STORE,We Offer the best Brands of Phone. Contacts us at amosmoyo5300@gmail.com Or Click The Green Link to order!');
   }
   onNotify(data:any){
     window.alert(data);
