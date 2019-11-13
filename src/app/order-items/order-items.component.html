@@ -12,29 +12,46 @@
 
     <div>
         <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" name="myForm" novalidate>
-            <div>
-                <div *ngIf="(err.username.dirty || err.username.touched) && err.username.invalid && err.username.errors">
-                        <span *ngIf="err.username.errors.required" class="warning">***The Customer Name is required***</span>
-                </div>
+            <div class="cont">
                 <label for="name">Name</label>
-                <input type="text" id="name" formControlName="username" >
-            </div>
-            <div>
-                <div *ngIf="(err.email.dirty || err.email.touched) && err.email.errors">
-                        <span *ngIf="err.email.errors.required" class="warning">***The Customer Email is required***</span>
-                        <span *ngIf="err.email.errors.email" class="warning">***The Email must be a valid(have @gmail or @yahoo),***</span>
+
+                <input 
+                     type="text" id="name" 
+                     formControlName="username" 
+                     class="form-group" 
+                     [ngClass]="{'is-invalid': (err.username.dirty || err.username.touched) && err.username.invalid && err.username.errors}"
+                >
+
+                <div *ngIf="(err.username.dirty || err.username.touched) && err.username.invalid && err.username.errors" class="valid">
+                    <span *ngIf="err.username.errors.required" class="warning">***The Customer Name is required***</span>
                 </div>
+            </div>
+            <div class="cont">
                 <label for="address">Email Address</label>
-                <input type="text" id="address" formControlName="email">
+                <input type="text" 
+                      id="address" 
+                      formControlName="email" 
+                      class="form-group"
+                      [ngClass]="{'is-invalid' : (err.email.dirty || err.email.touched) && err.email.errors}"
+                >
+                <div *ngIf="(err.email.dirty || err.email.touched) && err.email.errors" class="valid">
+                    <span *ngIf="err.email.errors.required" class="warning">***The Customer Email is required***</span>
+                    <span *ngIf="err.email.errors.email" class="warning">***The Email must be a valid(have @gmail or @yahoo),***</span>
+                </div>
             </div>
-            <div>
-                <div *ngIf="(err.message.dirty || err.message.touched) && err.message.invalid && err.message.errors">
-                        <span *ngIf="err.message.errors.required" class="warning">***The  Name Of The Product is required***</span>
-                </div>                
+            <div class="cont">                
                 <p><mark>Enter The Name of the Product you are ordering.</mark><br> You can also tell us what you think about our site.</p>
-                <input type="text" formControlName="message" id="message">
+                <input type="text" 
+                       formControlName="message" 
+                       id="message" 
+                       class="form-group"
+                       [ngClass]="{'is-invalid' : (err.message.dirty || err.message.touched) && err.message.invalid && err.message.errors}"
+                >
+                <div *ngIf="(err.message.dirty || err.message.touched) && err.message.invalid && err.message.errors" class="valid">
+                    <span *ngIf="err.message.errors.required" class="warning">***The  Name Of The Product is required***</span>
+               </div>
             </div>
-            <div>
+            <div class="cont">
                 <label for="delivary service">How is you Product is to be delivered?<br><mark>See our Delivery Service</mark></label>
                 <input type="text" formControlName="delivary" id="delivary">
             </div>

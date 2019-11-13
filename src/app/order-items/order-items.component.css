@@ -47,3 +47,15 @@ a:hover{
 .warning{
   color:red;
 }
+.valid{
+  margin-top:0px; margin-bottom:5px;
+}
+.form-group{
+  margin-bottom:0px;
+}
+.cont{
+   margin-top:3px;
+}
+.is-invalid{
+  border:2px solid red;
+}
