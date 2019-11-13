@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular Getting Started</title>
+    <base href="https://amosmoyo.github.io/HCIGROUP-AREPO4/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="styles.3dc57724e29509e6d946.css"></head>
+  <body>
+      <script>
+          (function () {
+            // Retrieve the URL the user was trying to access when receiving the 404.
+            var redirect = sessionStorage.redirect;
+            // Remove the URL from sessionStorage.
+            delete sessionStorage.redirect;
+            // Check if we actually need to redirect.
+            if (redirect && redirect != location.href) {
+              // We need to redirect to the URL the user was trying to access.
+              history.replaceState(null, null, redirect);
+            }
+          })();
+    </script>
+    <app-root></app-root>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBBv_JKx8pUbHozie_6HnMgDIF7Sp6C578",
+    authDomain: "amosmoyo3-db579.firebaseapp.com",
+    databaseURL: "https://amosmoyo3-db579.firebaseio.com",
+    projectId: "amosmoyo3-db579",
+    storageBucket: "amosmoyo3-db579.appspot.com",
+    messagingSenderId: "111202223070",
+    appId: "1:111202223070:web:b2314f9789bd834441534f",
+    measurementId: "G-P0BQ0X3VS0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  </script>
+  <script src="runtime-es2015.e8a2810b3b08d6a1b6aa.js" type="module"></script><script src="runtime-es5.e8a2810b3b08d6a1b6aa.js" nomodule defer></script><script src="polyfills-es5.15e7f6b19dfcfa36530c.js" nomodule defer></script><script src="polyfills-es2015.abe32ef083067d38c830.js" type="module"></script><script src="main-es2015.603c7ceb989e7ee47c83.js" type="module"></script><script src="main-es5.603c7ceb989e7ee47c83.js" nomodule defer></script></body>
+</html>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
