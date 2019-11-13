@@ -1,7 +1,7 @@
 <div class="container">
     <div *ngFor="let shipping of delivaryCost | async" class="shipping-item">
         <span>{{shipping.type}}</span>
-        <span>{{shipping.price | currency }}</span>
+        <span>{{shipping.price | currency : 'Ksh ' }}</span>
     </div>
     <div>
        <h6>DONE? ClICK <strong>CHECKOUT</strong></h6>

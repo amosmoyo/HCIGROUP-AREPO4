@@ -8,6 +8,7 @@ import { Customer } from './login';
 
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database'
 
+declare let toastr:any;
 
 @Injectable({
   providedIn: 'root',
@@ -46,6 +47,10 @@ export class CartService {
       message:customer.message,
       delivary:customer.delivary
     })
+  }
+
+  success(message:string,title?:string){
+     toastr.success(message,title)
   }
 
   /*/ Fetch Single Customer Object

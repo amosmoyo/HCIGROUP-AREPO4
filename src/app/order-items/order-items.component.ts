@@ -2,11 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 //import { products } from '../products';
 
-import { ToastrService } from 'ngx-toastr';
+import { FormBuilder, FormGroup, Validator, Validators} from '@angular/forms';
 
-import { FormBuilder, FormGroup} from '@angular/forms';
-
-import { CartService } from '../cart.service';
+import { CartService } from '../cart.service'
 
 @Component({
   selector: 'app-order-items',
@@ -18,29 +16,42 @@ export class OrderItemsComponent implements OnInit {
 
   public checkoutForm:FormGroup;
 
-  constructor(public cartService:CartService,public formBuilder:FormBuilder,public toastr: ToastrService) { }
+  submitted = false;
+
+  constructor(public cartService:CartService,public formBuilder:FormBuilder) { }
 
   ngOnInit() {
     this.items = this.cartService.getItems();
     this.cartService.GetCustomersList();
     this.checkoutsForm();
   }
+  get err(){
+    return this.checkoutForm.controls;
+  }
 
   checkoutsForm(){
      this.checkoutForm = this.formBuilder.group({
-       username:'',
-       email:'',
-       message:'',
-       delivary:''
+       username:['',Validators.required],
+       email:['',[Validators.email,Validators.required]],
+       message:['',Validators.required],
+       delivary:['']
      })
   }
+   //err.email.$dirty && email.$invalid &&
 
   onSubmit(userdata:any){
-    
+
+    this.submitted = true;
+
     this.items = this.cartService.clearCart();
     this.cartService.AddCustomer(this.checkoutForm.value);
-    this.toastr.success('You order was successfully placed');
+    /*this.cartService.success('You order was successfully placed');*/
     this.checkoutForm.reset();
+    window.alert(`YOU MUST HAVE FILLED THE FORM FOR YOUR ORDER TO PROCESSED.REMEMBER TO CLICK HOME BUTTON TO MAKE ANOTHER ORDER!
+                 PRESS OK!`)
   }
+  /*successEvent(itemName){
+    this.cartService.success('You order was successfully placed');
+  }*/
 
 }

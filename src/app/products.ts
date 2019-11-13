@@ -1,7 +1,7 @@
 export const products = [
     {
       name: 'Infinix Hot 7',
-      price: 100,
+      price: 10000,
       description: 'Infinix Hot 7 (X624), 16GB + 1GB (Dual SIM), Gold',
       details:`Get the incredible HOT 7 x624 at CROMO-Eletronic Store! The 6.2-inch HD+ IPS LCD 
       capacitive touchscreen offers Infinix users the Full View experience.
@@ -11,7 +11,7 @@ export const products = [
     },
     {
       name: 'Tecno Spark 3 (KB7)',
-      price: 100,
+      price: 10000,
       description: 'Tecno Spark 3 (KB7), 6.2",32GB+2GB, (Dual SIM)- Blue+FREE OTG CABLE',
       details:`TECNO Spark 3 smartphone features a Android 9 Pie Os, 6.2-inch display,
        Helio A22 chipset, 8 MP selfie camera, 13 MP + 2 MP dual rear camera, 2 GB RAM, 
@@ -21,7 +21,7 @@ export const products = [
     },
     {
       name: 'Gionee M6 Plus',
-      price: 130,
+      price: 13000,
       description: 'Gionee M6 Plus(4GB RAM +64GB ROM ,8MP+16MP Camera, 6020mAh Battery, Dual SIM 4G, Amoled 6 Inch FHD Display)//GOLD',
       details:`The M6 Plus is equipped with a powerful 6020mAh polymer battery in a 8.2mm to thin body
       , complemented by an intelligent power management system that allows every milliampere of electricity
@@ -32,7 +32,7 @@ export const products = [
     },
     {
       name: 'Samsung Galaxy A10S',
-      price: 127,
+      price: 12700,
       description:'Samsung Galaxy A10S, 6.2", 32GB + 2GB (Dual SIM) - Black',
       details:`Samsung’s Galaxy A products are a range of devices packed with compelling innovations for
       daily life. As the newest addition to the Galaxy A family, the Galaxy A10s delivers powerful
@@ -48,7 +48,7 @@ export const products = [
     },
     {
       name: 'Tecno Pouvoir 3 (LB7)',
-      price: 99,
+      price: 9999,
       description: 'Tecno Pouvoir 3 (LB7), 6.2", 32GB + 2GB (Dual SIM),Blue',
       details:`Tecno Pouvoir 3 runs on the latest Android 8.1 Oreo operating system with 1.28 GHz Quad-Core
        processor and a 5000mAh Battery. It comes with a bigger 6.2-inch HD+ SuperFullVIEW capacitive touchscreen
